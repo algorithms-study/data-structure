@@ -6,8 +6,6 @@
 using namespace std;
 
 class Stack {
-  private:
-    int peek;
   public:
     vector<int> arr;
     Stack(); // construct
@@ -20,15 +18,10 @@ class Stack {
 
 Stack::Stack() {
   // arr.resize(MAX);
-  peek = -1;
 }
 
 // top 에 원소를 추가
 void Stack::push(int element) {
-  if (peek == MAX - 1) {
-    cout << "MAX STACK" << endl;
-  }
-
   // arr[++top] = element;
   arr.push_back(element); // vector method
 }
